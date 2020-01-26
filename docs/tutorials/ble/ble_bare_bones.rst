@@ -125,7 +125,7 @@ profiles: ``debug`` and ``optimized``.
 
     ~/dev/my_proj1$ newt target set ble_tgt     \
         app=apps/ble_app                        \
-        bsp=@apache-mynewt-core/hw/bsp/nrf52dk  \
+        bsp=@apache-mynewt-core/hw/bsp/nordic_pca10040  \
         build_profile=optimized
     Target targets/ble_tgt successfully set target.app to apps/ble_app
     Target targets/ble_tgt successfully set target.bsp to @apache-mynewt-core/hw/bsp/nrf52dk
@@ -148,10 +148,10 @@ host, and in-RAM transport to ``apps/ble_app/pkg.yml``:
         - "@apache-mynewt-core/sys/console/full"
         - "@apache-mynewt-core/sys/log/full"
         - "@apache-mynewt-core/sys/stats/full"
-        - "@apache-mynewt-core/net/nimble/controller"
-        - "@apache-mynewt-core/net/nimble/host"
-        - "@apache-mynewt-core/net/nimble/host/store/config"
-        - "@apache-mynewt-core/net/nimble/transport/ram"``
+        - "@apache-mynewt-nimble/nimble/controller"
+        - "@apache-mynewt-nimble/nimble/host"
+        - "@apache-mynewt-nimble/nimble/host/store/config"
+        - "@apache-mynewt-nimble/nimble/transport/ram"``
 
 **Important note:** The controller package affects system configuration,
 see :doc:`this page <../../../ble_setup/ble_lp_clock/>` for
